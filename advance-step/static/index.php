@@ -50,23 +50,36 @@ class User
 User::route("/project",function (){
     echo  "project";
 });
-
+echo "<br>";
 User::route("/about", function () {
     echo  "about";
 });
 
+echo "<br>"; 
+
 User::increment();
 User::increment();
 User::increment();
 User::increment();
 User::increment();
 
-echo User::$number;
-echo "<br>";
-User::increment();
 echo "<br>";
 
+echo "Apply User Num : ".User::$number;
+echo "<br>";
+echo "<br>";
+
+User::increment();
+echo "<br>";
 echo User::$number;
+echo "<br>";
+echo "<br>";
+
+echo "User Dec :". User::decrement();
+echo "<br>";
+echo "After Dec :". User::$number;
+
+echo "<br>";
 echo "<br>";
 echo User::GENDER;
 echo "<br>";
