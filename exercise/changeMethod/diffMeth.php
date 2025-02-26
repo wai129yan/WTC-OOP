@@ -2,8 +2,8 @@
 
 class Shipping 
 {
-    protected $weight;
-    protected $shippingCost = 3000; // 5000
+    protected $weight; //purpose is to use for child 
+    protected $shippingCost = 3000; // 5000  //private
 
     public function __construct($weight)
     {
@@ -20,6 +20,10 @@ class Shipping
        return $this->shippingCost;
     }
 }
+
+$s1 = new Shipping(10);
+echo $s1->getShippingCost();
+
 
 class StandardShipping extends Shipping
 {
@@ -47,11 +51,11 @@ class ExpressShipping extends Shipping {
     }
 }
 
-$standard = new StandardShipping(110);
-echo "Standard Shipping Cost: " . $standard->calculateShippingCost() . "<br>";
-echo "Express Shipping Time: " . $standard->getShippingTime() . "<br>";
-echo  "Shipping Cost is " .$standard->getShippingCost();
-echo "<br>";    
+// $standard = new StandardShipping(110);
+// echo "Standard Shipping Cost: " . $standard->calculateShippingCost() . "<br>";
+// echo "Express Shipping Time: " . $standard->getShippingTime() . "<br>";
+// echo  "Shipping Cost is " .$standard->getShippingCost();
+// echo "<br>";    
 
-$express = new ExpressShipping(40);
-echo "Express Shipping Cost: " . $express->calculateShippingCost() . "<br>";
+// $express = new ExpressShipping(40);
+// echo "Express Shipping Cost: " . $express->calculateShippingCost() . "<br>";
