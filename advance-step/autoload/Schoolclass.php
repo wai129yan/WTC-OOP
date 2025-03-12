@@ -14,6 +14,10 @@ class Schoolclass
     {
         echo $this->classtime->time();
     }
+    public function getPlayTime()
+    {
+        echo $this->classtime->playTime();
+    }
 
     public function getStudent()
     {
